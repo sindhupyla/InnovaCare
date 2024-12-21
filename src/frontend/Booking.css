@@ -1,0 +1,142 @@
+/* Reset styles and basic layout for booking page */
+.booking-page body, .booking-page html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.booking-page .header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.booking-page .navbar {
+    background: linear-gradient(to bottom right, #6dd5ed, #2193b0);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.booking-page .navbar .links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.booking-page .navbar .links a:hover {
+    color:  #6dd5ed; /* Light green hover color */
+}
+
+.booking-page .container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.booking-page h2 {
+    text-align: center;
+    color: black; /* Dark green color */
+}
+
+.booking-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-page label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.booking-page input[type="text"],
+.booking-page input[type="email"],
+.booking-page input[type="tel"],
+.booking-page input[type="date"],
+.booking-page input[type="time"],
+.booking-page select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.booking-page input[type="text"]:focus,
+.booking-page input[type="email"]:focus,
+.booking-page input[type="tel"]:focus,
+.booking-page input[type="date"]:focus,
+.booking-page input[type="time"]:focus,
+.booking-page select:focus {
+    border-color:  #6dd5ed; /* Dark green color */
+}
+
+.booking-page input[type="submit"] {
+    background-color:  #6dd5ed; /* Dark green color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.booking-page input[type="submit"]:hover {
+    background-color:  #6dd5ed; /* Darker green color */
+}
+
+.booking-page .error {
+    border-color: red;
+}
+
+.booking-page .error-text {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.booking-page .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.booking-page .popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.booking-page .popup-content button {
+    background-color: #6dd5ed; /* Dark green color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.booking-page .popup-content button:hover {
+    background-color: #2193b0; /* Darker green color */
+}

@@ -1,0 +1,164 @@
+/* General Styles for FindDoctor Component */
+.find-doctor-container {
+    width: 100%;
+    height: 100%;
+    font-family: Tahoma, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: white; /* Ensure no grey background */
+}
+
+.find-doctor-container::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+}
+
+/* Navigation Bar */
+.find-doctor-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom right, #6dd5ed, #2193b0);
+    color: white;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    font-size: 1.2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow to give some depth */
+}
+
+.find-doctor-nav .nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.find-doctor-nav .nav-left .logo {
+    
+        width: 50px; /* Ensure equal width and height */
+        height: 50px; /* Ensure equal width and height */
+        margin-right: 15px;
+        border-radius: 50%; /* Make it circular */
+        object-fit: cover; /* Ensure the image covers the entire container */
+        background-color: white; /* Fill the circle with white color */
+    }
+
+.find-doctor-nav .nav-left span {
+    font-size: 1.5em;
+}
+
+.find-doctor-nav .nav-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 60px;
+}
+
+.find-doctor-nav .nav-right a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.find-doctor-nav .nav-right a:hover {
+    color: #ddd;
+}
+
+/* FindDoctor Page Styles */
+.find-doctor-search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px; /* Adjusted margin for fixed navbar */
+    padding: 20px;
+}
+
+.find-doctor-image-container {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.find-doctor-image-container .doctor-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.find-doctor-image-container .doctor-image:hover {
+    transform: scale(1.05);
+}
+
+.find-doctor-image-container .quotes {
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
+    color: #333; /* Darker color for the quote */
+    font-size: 1.2em; /* Increase quote text size */
+}
+
+.find-doctor-search-box {
+    width: 60%;
+    display: flex;
+    margin-bottom: 20px;
+    position: relative; /* Position for suggestions */
+}
+
+.find-doctor-search-box select {
+    width: 90%; /* Increased width */
+    padding: 10px;
+    border: 2px solid #74c5ed;
+    border-radius: 20px 0 0 20px; /* Rounded rectangle */
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    background: white; /* White background */
+    color: black; /* Black text */
+}
+
+.find-doctor-search-box .search-button {
+    border: none;
+    background: none; /* No background */
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px; /* Padding to match the height of the select box */
+    color: black; /* Black color for the search icon */
+}
+
+.find-doctor-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 90%; /* Match width to select */
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for suggestions */
+    border-radius: 0 0 10px 10px; /* Rounded corners */
+}
+
+.find-doctor-suggestions div {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.find-doctor-suggestions div:hover {
+    background: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .find-doctor-search-box {
+        width: 90%;
+    }
+}

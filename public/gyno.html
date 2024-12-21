@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gynecologist Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align content vertically */
+            background-color: #f0f0f0;
+        }
+        nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom right, #6dd5ed, #2193b0);
+    color: white;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    font-size: 1.2em;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.nav-left .logo {
+    width: 50px; /* Ensure equal width and height */
+    height: 50px; /* Ensure equal width and height */
+    margin-right: 15px;
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    background-color: white; /* Fill the circle with white color */
+}
+
+.nav-left span {
+    font-size: 1.5em;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 60px;
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.nav-right a:hover {
+    color: #ddd;
+}
+        .doctor-select {
+            margin-top: 100px; /* Add margin to ensure it's below the fixed navbar */
+            text-align: center;
+        }
+
+        .book-now-button {
+            display: block; /* Make button a block element */
+            margin: 20px auto; /* Center the button horizontally */
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .book-now-button:hover {
+            background-color: #0056b3;
+        }
+
+        .doctor-container {
+            display: none; /* Initially hide all doctor containers */
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            box-sizing: border-box; /* Ensure padding and border fit within width */
+        }
+
+        .doctor-container.active {
+            display: flex; /* Display active doctor container */
+        }
+
+        .doctor-container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .doctor-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .doctor-info h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        .doctor-info p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <img src='./logo.jpg' alt="Logo" class="logo" />
+            <span>InnovaCare</span>
+        </div>
+        <div class="nav-right">
+            <a href="/main">Home</a>
+            <a href="/main">About</a>
+            <a href="/main">Contact Us</a>
+            <a href="/">Logout</a>
+        </div>
+    </nav>
+
+<div class="doctor-select">
+    
+    <button class="book-now-button" onclick="time.html" id="bookNowButton">Book Now</button>
+</div>
+
+<!-- Doctor containers with unique IDs based on specialization -->
+<div id="doctor1" class="doctor-container">
+    <img src="1.jpg" alt="Dr. John Doe">
+    <div class="doctor-info">
+        <h2>Dr. Sangeetha</h2>
+        <p>Qualification: MBBS, MD (Obst.& Gynae), F.C.G.P.,
+            FICOG
+        </p>
+        <p>Experience: 15 years</p>
+        <p>Hospital Affiliation: City Hospital</p>
+        <p>Contact: Emma@cityhospital.com</p>
+    </div>
+</div>
+
+<div id="doctor2" class="doctor-container">
+    <img src="14.jpg" alt="Dr. Jane Smith">
+    <div class="doctor-info">
+        <h2>Dr. Vibha</h2>
+        <p>Qualification: MBBS, MD</p>
+        <p>Experience: 10 years</p>
+        <p>Hospital Affiliation: City Hospital</p>
+        <p>Contact: vibha@cityhospital.com</p>
+    </div>
+</div>
+
+<div id="doctor3" class="doctor-container">
+    <img src="13.jpg" alt="Dr. Emily Johnson">
+    <div class="doctor-info">
+        <h2>Dr. Anju Rani</h2>
+        <p>Qualification: MBBS, MD</p>
+        <p>Experience: 12 years</p>
+        <p>Hospital Affiliation: City Hospital</p>
+        <p>Contact: anju@cityhospital.com</p>
+    </div>
+</div>
+
+<div id="doctor4" class="doctor-container">
+    <img src="15.jpg" alt="Dr. Michael Brown">
+    <div class="doctor-info">
+        <h2>Dr. Anchala</h2>
+        <p>Qualification: MBBS, MD</p>
+        <p>Experience: 20 years</p>
+        <p>Hospital Affiliation: City Hospital</p>
+        <p>Contact: anchala@cityhospital.com</p>
+    </div>
+</div>
+
+<div id="doctor5" class="doctor-container">
+    <img src="4.jpg" alt="Dr. Linda Davis">
+    <div class="doctor-info">
+        <h2>Dr. Minu</h2>
+        <p>Qualification: MBBS, MD</p>
+        <p>Experience: 18 years</p>
+        <p>Hospital Affiliation: City Hospital</p>
+        <p>Contact: minu@cityhospital.com</p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var bookNowButton = document.getElementById('bookNowButton');
+        var doctorSelect = document.getElementById('doctorSelect');
+
+        // Show all doctor containers initially
+        var doctorContainers = document.querySelectorAll('.doctor-container');
+        doctorContainers.forEach(function(container) {
+            container.classList.add('active');
+        });
+
+        // Add click event listener to the button
+        bookNowButton.addEventListener('click', function() {
+            var selectedDoctorId = doctorSelect.value;
+
+            // Show only the selected doctor container
+            doctorContainers.forEach(function(container) {
+                if (container.id === selectedDoctorId) {
+                    container.classList.add('active');
+                } else {
+                    container.classList.remove('active');
+                }
+            });
+        });
+
+        // Change event listener for select element
+        doctorSelect.addEventListener('change', function() {
+            var selectedDoctorId = doctorSelect.value;
+
+            // Show only the selected doctor container
+            doctorContainers.forEach(function(container) {
+                if (container.id === selectedDoctorId || selectedDoctorId === 'none') {
+                    container.classList.add('active');
+                } else {
+                    container.classList.remove('active');
+                }
+            });
+        });
+    });
+document.addEventListener("DOMContentLoaded", function() {
+            var bookNowButton = document.getElementById('bookNowButton');
+            
+            // Add click event listener to the button
+            bookNowButton.addEventListener('click', function() {
+                // Navigate to general appointment booking page
+                window.location.href = "/booking";
+            });
+        });
+</script>
+
+</body>
+</html>

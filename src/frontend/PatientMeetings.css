@@ -1,0 +1,105 @@
+/* General container styles */
+.patient-meetings-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Navigation Bar */
+.patient-meetings-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom right, #6dd5ed, #2193b0);
+    color: white;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    font-size: 1.2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow to give some depth */
+}
+
+.patient-meetings-nav .nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.patient-meetings-nav .nav-left .logo {
+    width: 50px; /* Ensure equal width and height */
+    height: 50px; /* Ensure equal width and height */
+    margin-right: 15px;
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    background-color: white; /* Fill the circle with white color */
+}
+
+.patient-meetings-nav .nav-left span {
+    font-size: 1.5em;
+}
+
+.patient-meetings-nav .nav-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 60px;
+}
+
+.patient-meetings-nav .nav-right a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.patient-meetings-nav .nav-right a:hover {
+    color: #ddd;
+}
+
+/* Content styles */
+.content {
+    margin-top: 100px; /* Adjusted margin for fixed navbar */
+}
+
+/* Header styles */
+.patient-meetings-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* No appointments message styles */
+.patient-meetings-container p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Appointments list styles */
+.patient-meetings-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Individual appointment item styles */
+.patient-meetings-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: transform 0.3s ease; /* Transition for zoom effect */
+}
+
+/* Appointment details styles */
+.patient-meetings-list li p {
+    margin: 5px 0;
+}
+
+/* Zoom effect on hover */
+.patient-meetings-list li:hover {
+    transform: scale(1.05);
+}

@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #95a09ada;
+    
+    
+    
+    margin: 0;
+    padding: 0;
+    
+}
+.login-background {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.login-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent beige color */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 320px;
+    margin: 10px;
+    position: absolute;
+}
+
+.doctor-login {
+    top: 20%;
+    left: 20%;
+}
+
+.patient-login {
+    top: 20%;
+    right: 20%;
+}
+
+.login-container h2 {
+    text-align: center;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container h2 img {
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Adjust the size as needed */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 15px; /* Rounded rectangle shape */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.form-group input[type="text"]:hover,
+.form-group input[type="password"]:hover {
+    transform: scale(1.05); /* Enlarge slightly on hover */
+}
+
+.form-group input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .doctor-login, .patient-login {
+        position: static;
+        margin-bottom: 20px;
+    }
+}
+
+/* Modal styles */
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: fadeIn 0.5s;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* LoginPage.css */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

@@ -1,0 +1,240 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Tahoma, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+}
+
+/* Navigation Bar */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom right, #6dd5ed, #2193b0);
+    color: white;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    font-size: 1.2em;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-left span {
+    font-size: 1.5em;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 60px;
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.nav-right a:hover {
+    color: #ddd;
+}
+
+/* Video Section */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.welcome-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 1;
+    color: white;
+    font-family: 'Garamond', serif;
+    position: relative;
+    font-size: 3.8em;
+    overflow: hidden;
+}
+
+.welcome-text h1 {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+    padding-right: 5px;
+    animation: typing 6s steps(30, end) infinite, blink 500ms step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+/* Options Section */
+.options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background-color: white; /* Changed background color to white */
+}
+
+.option-box {
+    background: linear-gradient(to bottom right, #6dd5ed, #2193b0);
+    border-radius: 25px;
+    padding: 40px;
+    margin: 20px;
+    font-size: 2.5em;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    width: 25%;
+    height: 300px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.option-box img {
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.option-box:hover {
+    background: linear-gradient(to bottom right, #46a6bb, #17678b);
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.option-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.option-link:hover {
+    text-decoration: none;
+}
+
+/* Section Styles */
+.section {
+    padding: 100px 20px 50px;
+    background-color: #f4f4f4;
+    width: 100%;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+
+    
+}
+
+.section h2 {
+    font-size: 2.5em;
+}
+
+.section p {
+    font-size: 1.2em;
+}
+
+/* Contact Icons */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.contact-icons a {
+    color: #0086b3;
+    margin: 0 15px;
+    font-size: 2em;
+    transition: color 0.3s;
+}
+
+.contact-icons a:hover {
+    color: #005599;
+}
+
+/* Contact Numbers */
+.contact-numbers {
+    margin: 20px 0;
+    font-size: 1.2em;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to bottom right, #6dd5ed, #2193b0);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
